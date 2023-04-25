@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookopedia | Login</title>
+    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="post">
+
+            {% csrf_token %}
+            <div class="user-box">
+                <input type="text" name="username" placeholder="Username">
+                <label for="">Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" placeholder="password">
+                <label for="">Password</label>
+            </div>
+            <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <input type="submit" name="submit" class="submit" value="Login">
+            </a>
+        </form>
+    </div>
+</body>
+</html>

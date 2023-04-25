@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags must come first in the head; any other head content must come after these tags -->
+
+    <!-- Title  -->
+    <title>Bookopedia | Checkout</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="/static/cart/css/core-style.css">
+    <link rel="stylesheet" href="/static/cart/style.css">
+    <link rel="stylesheet" href="/static/cart/scss/style.scss">
+    <link rel="stylesheet" type="text/css" href="{% static '/user_dashboard/css/style.css' %}">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="/static/user_dashboard/images/video.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <!-- header section start -->
+        <div class="header_section">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="logo" href="index.html"><img src="/static/user_dashboard/images/logo1.png" style="width:50%"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%  url 'user_dashboard' %}">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%  url 'new_arrivals' %}">New Arrivals</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%  url 'best_sellers' %}">Best Sellers</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{%  url 'aboutus' %}">About Us</a>
+                      </li>
+                  </ul>
+                  <div class="search_icon"><a href="#"><img src="/static/user_dashboard/images/notification-icon.png"><span class="padding_left_15">Notification</span></a></div>
+                  <div class="search_icon"><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="padding_left_15">Cart<span>(3)</span></a></div>
+                  <div class="search_icon"><a href="{%  url 'user_dashboard' %}"><img src="/static/user_dashboard/images/user-icon.png"><span class="padding_left_15">logout</span></a></div>
+                  <div class="search_icon"><a href="#"><img src="/static/user_dashboard/images/search-icon.png"><span class="padding_left_15">Search...</span></a></div>
+               </div>
+            </nav>
+         </div>
+    <!-- header section end -->
+    <div class="cart-table-area section-padding-100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="checkout_details_area">
+
+                            <div class="cart-title">
+                                <h2 style="text-align: center; font-size: 50px; color: rgb(255, 255, 255);background-image:linear-gradient() ;">Checkout</h2>
+                            </div>
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="first_name" value="" placeholder="First Name" required style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="last_name" value="" placeholder="Last Name" required style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" id="company" placeholder="Company Name" value="" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" value="" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <select class="w-100" id="country" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white; height: 60px;">
+                                        <option value="usa">United States</option>
+                                        <option value="uk">United Kingdom</option>
+                                        <option value="ger">Germany</option>
+                                        <option value="fra">France</option>
+                                        <option value="ind">India</option>
+                                        <option value="aus">Australia</option>
+                                        <option value="bra">Brazil</option>
+                                        <option value="cana">Canada</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control mb-3" id="street_address" placeholder="Address" value="" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" id="city" placeholder="Town" value="" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" value="" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="number" class="form-control" id="phone_number" min="0" placeholder="Phone No" value="" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <textarea name="comment" class="form-control w-100" id="comment" cols="30" rows="10" placeholder="Leave a comment about your order" style="background-color: rgba(220, 219, 219, 0.281); backdrop-filter: blur(10px); border-radius: 10px; color:white;"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="custom-control custom-checkbox d-block mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2">Create an accout</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-block">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3">Ship to a different address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="cart-summary" >
+                            <h2 style="text-align: center; font-size: 50px; color: rgb(255, 255, 255);background-image:linear-gradient() ;">Cart Total</h2>
+                            <ul class="summary-table" style="font-size: 20px;">
+                                <li><span>subtotal:</span> <span>₹1078.00</span></li>
+                                <li><span>delivery:</span> <span>Free</span></li>
+                                <li><span>total:</span> <span>₹1078.00</span></li>
+                            </ul>
+
+                            <div class="payment-method">
+                                <!-- Cash on delivery -->
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="cod" checked>
+                                    <label class="custom-control-label" for="cod">Cash on Delivery</label>
+                                </div>
+                                <!-- Paypal -->
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="paypal">
+                                    <label class="custom-control-label" for="paypal">Paypal <img class="ml-15" src="img/core-img/paypal.png" alt=""></label>
+                                </div>
+                            </div>
+
+                            <div class="cart-btn mt-100">
+                                <a href="#" class="btn amado-btn w-100">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
+
+   
+
+   
+    <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+    <script src="/static/cart/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/static/cart/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/static/cart/js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/static/cart/js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/static/cart/js/active.js"></script>
+
+</body>
+
+</html>
